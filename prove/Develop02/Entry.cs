@@ -1,21 +1,21 @@
 public class Entry
 {
     public string Prompt { get; set; }
-    public string Response { get; set; }
+    public string Text { get; set; }
     public string Date { get; set; }
 
-    public Entry(string prompt, string response)
+    public Entry(string prompt, string text)
     {
         Prompt = prompt;
-        Response = response;
+        Text = text;
         Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
     }
 
-    public void DisplayEntry()
+    public void Display()
     {
         Console.WriteLine($"Date: {Date}");
         Console.WriteLine($"Prompts: {Prompt}");
-        Console.WriteLine($"Response: {Response}");
+        Console.WriteLine($"Response: {Text}");
         Console.WriteLine();
     }
 }
